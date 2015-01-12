@@ -13,6 +13,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Store data perminantly
+        // - Step 1. Build a value
+        //NSUserDefaults.standardUserDefaults().setObject("Rob", forKey: "myName")
+        // - Step 2. Save the value
+        //NSUserDefaults.standardUserDefaults().synchronize()
+        
+        
+        // Access the value later
+        println(NSUserDefaults.standardUserDefaults().objectForKey("myName")!)
     }
 
     override func didReceiveMemoryWarning() {
